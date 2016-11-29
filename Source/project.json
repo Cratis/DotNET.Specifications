@@ -1,9 +1,9 @@
 {
-    "name":"Cratis.Core",
+    "name":"Cratis.Specifications",
     "version": "1.0.0-*",
-    "description": "",
+    "description": "Implementation of the Specifications pattern",
     "authors": [
-        "einari"
+        "Einar Ingebrigtsen <einar@dolittle.com>"
     ],
     "dependencies": {
         "Microsoft.NETCore.App": {
