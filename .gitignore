@@ -30,6 +30,8 @@ Source/Bifrost.QuickStart/App_Data
 TestResults/*
 NDependOut
 
+artefacts
+
 # OS generated files #
 ######################
 .DS_Store
