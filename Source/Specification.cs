@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Cratis.Core.Specifications
+namespace Cratis.Specifications
 {
     /// <summary>
     /// Base class for expressing a complex rule in code.  Utilising the Specification pattern. 

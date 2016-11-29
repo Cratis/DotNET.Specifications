@@ -5,7 +5,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Cratis.Core.Specifications
+namespace Cratis.Specifications
 {
     /// <summary>
     /// Helper for combining Lambdas.

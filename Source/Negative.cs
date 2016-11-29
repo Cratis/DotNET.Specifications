@@ -5,7 +5,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace Cratis.Core.Specifications
+namespace Cratis.Specifications
 {
     /// <summary>
     /// Negates a rule.  Rule is satisfied if the provided rule is not satisfied.

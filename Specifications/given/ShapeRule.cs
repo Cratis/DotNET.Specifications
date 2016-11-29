@@ -1,4 +1,4 @@
-namespace Cratis.Core.Specifications.Specifications.given
+namespace Cratis.Specifications.Specifications.given
 {
     public class ShapeRule : Specification<ColoredShape>
     {

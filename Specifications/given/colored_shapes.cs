@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Machine.Specifications;
 
-namespace Cratis.Core.Specifications.Specifications.given
+namespace Cratis.Specifications.Specifications.given
 {
     public class colored_shapes
     {

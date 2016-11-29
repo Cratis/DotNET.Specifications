@@ -1,6 +1,6 @@
 ﻿using Machine.Specifications;
 
-namespace Cratis.Core.Specifications.Specifications.given
+namespace Cratis.Specifications.Specifications.given
 {
     public class rules_and_colored_shapes : colored_shapes
     {

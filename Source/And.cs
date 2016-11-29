@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 using System.Linq.Expressions;
 
-namespace Cratis.Core.Specifications
+namespace Cratis.Specifications
 {
     /// <summary>
     /// Composes a rule that will be satisfied if both the first rule and the second rule are satisfied

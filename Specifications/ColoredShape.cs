@@ -1,4 +1,4 @@
-﻿namespace Cratis.Core.Specifications.Specifications
+﻿namespace Cratis.Specifications.Specifications
 {
     public class ColoredShape
     {

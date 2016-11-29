@@ -2437,7 +2437,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.0",
         "dependencies": {
-          "Microsoft.Extensions.DependencyModel": "1.0.0",
           "Microsoft.NETCore.App": "1.1.0",
           "System.Linq.Expressions": "4.1.0"
         }

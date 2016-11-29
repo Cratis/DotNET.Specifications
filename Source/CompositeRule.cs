@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Cratis.Core.Specifications
+namespace Cratis.Specifications
 {
     /// <summary>
     /// Composes two rules into a single rule that can be evaluated atomically.

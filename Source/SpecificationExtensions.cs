@@ -5,7 +5,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace Cratis.Core.Specifications
+namespace Cratis.Specifications
 {
     /// <summary>
     /// Extensions to help chain simple rules into complex rules
