@@ -1,6 +1,6 @@
 using Machine.Specifications;
 
-namespace Cratis.Specifications.Specifications
+namespace Cratis.Specifications.Specifications.for_And
 {
     [Subject(typeof(Specification<>))]
     public class when_applying_an_and_rule_against_an_instance_satifying_no_parts : given.rules_and_colored_shapes

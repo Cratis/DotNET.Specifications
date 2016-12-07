@@ -1,6 +1,6 @@
 using Machine.Specifications;
 
-namespace Cratis.Specifications.Specifications
+namespace Cratis.Specifications.Specifications.for_Negative
 {
     [Subject(typeof(Specification<>))]
     public class when_applying_a_not_rule_against_a_non_satisfying_instance : given.rules_and_colored_shapes
