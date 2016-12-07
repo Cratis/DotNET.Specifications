@@ -8,16 +8,12 @@
         "outputName":"Cratis.Specifications",
     },
     "dependencies": {
-        "Microsoft.NETCore.App": {
-            "type": "platform",
-            "version": "1.1.0"
-        },
-        "System.Linq.Expressions": "4.1.0"
-
+        "System.Runtime.InteropServices": "4.3.0",
+        "System.Collections": "4.3.0",
+        "System.Linq": "4.3.0",
+        "System.Linq.Expressions": "4.3.0"
     },
     "frameworks": {
-        "netcoreapp1.0": {
-            "imports": "dnxcore50"
-        }
+        "netstandard1.6": {}
     }
 }
