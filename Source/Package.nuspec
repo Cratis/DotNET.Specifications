@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Cratis.Specifications</id>
+    <version>1.0.0</version>
+    <authors>Einar Ingebrigtsen &lt;einar@dolittle.com&gt;</authors>
+    <owners>Einar Ingebrigtsen &lt;einar@dolittle.com&gt;</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides abstractions for discovering and working with assemblies</description>
+    <tags></tags>
+    <dependencies>
+      <group targetFramework="netstandard1.6">
+        <dependency id="System.Runtime.InteropServices" version="[4.3.0, )" />
+        <dependency id="System.Collections" version="[4.3.0, )" />
+        <dependency id="System.Linq" version="[4.3.0, )" />
+        <dependency id="System.Linq.Expressions" version="[4.3.0, )" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
