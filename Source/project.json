@@ -1,10 +1,12 @@
 {
-    "name":"Cratis.Specifications",
     "version": "1.0.0-*",
     "description": "Implementation of the Specifications pattern",
     "authors": [
         "Einar Ingebrigtsen <einar@dolittle.com>"
     ],
+    "buildOptions": {
+        "outputName":"Cratis.Specifications",
+    },
     "dependencies": {
         "Microsoft.NETCore.App": {
             "type": "platform",
