@@ -37,7 +37,7 @@ function restore {
 
 function buildProject {
     info "Building"
-    if dotnet build $1/**/project.json -c ${configuration} -f ${framework} ; then
+    if dotnet build $1/project.json -c ${configuration} -f ${framework} ; then
         success "Build succeeded"
     else 
         error "Build failed"
@@ -46,7 +46,7 @@ function buildProject {
 
 function testProject {
     info "Running tests for "$1
-    if dotnet test $1 -c ${configuration} -f ${framework} ; then
+    if dotnet test $1/project.json -c ${configuration} -f ${framework} ; then
         success "Test succeeded"
     else
         error "Test failed"
