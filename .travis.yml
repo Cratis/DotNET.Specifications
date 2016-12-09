@@ -7,7 +7,7 @@ dotnet: 1.0.0-preview2-003175
 script:
   - ./build.sh --quiet verify
 before_install:
-  - sudo apt-get update -q
+  - sudo apt-get update
 
 #language: csharp  
 #sudo: required  
