@@ -2,92 +2,102 @@
 
 # Inspired by  http://andrewlock.net/adding-travis-ci-to-a-net-core-app/
 
-configuration="Debug"
-framework=netcoreapp1.1
-pattern="./Specifications"
+dotnet restore
+dotnet build **/project.json
+dotnet test Specifications
 
-echo configuration = ${configuration}
-
-
-# Colors
-RED="\033[0;31m"
-GREEN="\033[1;32m"
-NC="\033[0m" # No Color
-
-function info {
-    echo -e "${NC}"$1
-} 
-
-function success {
-    echo -e "${GREEN}"$1
-} 
-
-function error {
-    echo -e "${RED}"$1
-}
-
-function restore {
-    info "Restoring packages..."
-    if dotnet --verbose restore ; then
-        success "Restore succeeded" 
-    else
-        error "Restore failed"
-    fi 
-}
-
-function buildProject {
-    info "Building"
-    if dotnet --verbose build $1/project.json -c ${configuration} -f ${framework} ; then
-        success "Build succeeded"
-    else 
-        error "Build failed"
-    fi
-}
-
-function testProject {
-    info "Running tests for "$1
-    if dotnet --verbose test $1/project.json -c ${configuration} -f ${framework} ; then
-        success "Test succeeded"
-    else
-        error "Test failed"
-    fi
-}
+#revision=${TRAVIS_JOB_ID:=1}  
+#revision=$(printf "%04d" $revision) 
+#
+##dotnet pack ./src/PROJECT_NAME -c Release -o ./artefacts --version-suffix=$revision
 
 
-# Exit if any command fails
-set -e
-
-artefactsFolder="./artefacts"
-
-if [ -d $artefactsFolder ]; then  
-  rm -R $artefactsFolder
-fi
-
-restore
-
-# Folders array
-folders=( ) 
-
-# Get all folders that match the pattern
-for _dir in ${pattern} 
-do 
-     [ -d "${_dir}" ] && folders+=(${_dir})      
-done
-
-# Build all projects 
-for _d in "${folders[@]}"
-do
-    buildProject $_d
-done
-
-for _d in "${folders[@]}"
-do
-    testProject $_d
-done
-
-revision=${TRAVIS_JOB_ID:=1}  
-revision=$(printf "%04d" $revision) 
-
-#dotnet pack ./src/PROJECT_NAME -c Release -o ./artefacts --version-suffix=$revision
-
-info "Building and testing all done.."  
+#configuration="Debug"
+#framework=netcoreapp1.1
+#pattern="./Specifications"
+#
+#echo configuration = ${configuration}
+#
+#
+## Colors
+#RED="\033[0;31m"
+#GREEN="\033[1;32m"
+#NC="\033[0m" # No Color
+#
+#function info {
+#    echo -e "${NC}"$1
+#} 
+#
+#function success {
+#    echo -e "${GREEN}"$1
+#} 
+#
+#function error {
+#    echo -e "${RED}"$1
+#}
+#
+#function restore {
+#    info "Restoring packages..."
+#    if dotnet --verbose restore ; then
+#        success "Restore succeeded" 
+#    else
+#        error "Restore failed"
+#    fi 
+#}
+#
+#function buildProject {
+#    info "Building"
+#    if dotnet --verbose build $1/project.json -c ${configuration} -f ${framework} ; then
+#        success "Build succeeded"
+#    else 
+#        error "Build failed"
+#    fi
+#}
+#
+#function testProject {
+#    info "Running tests for "$1
+#    if dotnet --verbose test $1/project.json -c ${configuration} -f ${framework} ; then
+#        success "Test succeeded"
+#    else
+#        error "Test failed"
+#    fi
+#}
+#
+#
+## Exit if any command fails
+#set -e
+#
+#artefactsFolder="./artefacts"
+#
+#if [ -d $artefactsFolder ]; then  
+#  rm -R $artefactsFolder
+#fi
+#
+#restore
+#
+## Folders array
+#folders=( ) 
+#
+## Get all folders that match the pattern
+#for _dir in ${pattern} 
+#do 
+#     [ -d "${_dir}" ] && folders+=(${_dir})      
+#done
+#
+## Build all projects 
+#for _d in "${folders[@]}"
+#do
+#    buildProject $_d
+#done
+#
+#for _d in "${folders[@]}"
+#do
+#    testProject $_d
+#done
+#
+#revision=${TRAVIS_JOB_ID:=1}  
+#revision=$(printf "%04d" $revision) 
+#
+##dotnet pack ./src/PROJECT_NAME -c Release -o ./artefacts --version-suffix=$revision
+#
+#info "Building and testing all done.."  
