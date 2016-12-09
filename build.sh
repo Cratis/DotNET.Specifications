@@ -28,7 +28,7 @@ function error {
 
 function restore {
     info "Restoring packages..."
-    if dotnet restore ; then
+    if dotnet --verbose restore ; then
         success "Restore succeeded" 
     else
         error "Restore failed"
@@ -45,7 +45,7 @@ function buildProject {
 }
 
 function testProject {
-    info "Running tests for "
+    info "Running tests for "$1
     if dotnet test $1 -c ${configuration} -f ${framework} ; then
         success "Test succeeded"
     else
@@ -71,7 +71,6 @@ folders=( )
 # Get all folders that match the pattern
 for _dir in ${pattern} 
 do 
-    echo ${_dir}
      [ -d "${_dir}" ] && folders+=(${_dir})      
 done
 
