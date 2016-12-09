@@ -4,7 +4,7 @@
 
 configuration="Debug"
 framework=netcoreapp1.1
-pattern="Specifications"
+pattern="./Specifications"
 
 echo configuration = ${configuration}
 
